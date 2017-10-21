@@ -8,11 +8,20 @@
 
 import Cocoa
 
-class DropViewController: NSViewController {
+protocol DropViewInput: class {
+    func setTextColor(_: NSColor)
+}
 
+class DropViewController: NSViewController {
+    @IBOutlet weak var descriptionLabel: NSTextField!
+    @IBOutlet weak var dropView: DropView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
     
+    func setTextColor(_ color: NSColor){
+        descriptionLabel.textColor = color
+    }
 }

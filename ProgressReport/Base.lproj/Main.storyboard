@@ -733,6 +733,10 @@
                             <constraint firstItem="nvL-Hl-b3Z" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="fjQ-vo-ZJ0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="gfn-OJ-Hnf" id="vgr-sc-G0g"/>
+                        <outlet property="dropView" destination="nvL-Hl-b3Z" id="Zsb-dp-DUL"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
