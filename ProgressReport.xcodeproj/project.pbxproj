@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		24148AD51F9A140E00A0A556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24148AD41F9A140E00A0A556 /* AppDelegate.swift */; };
-		24148AD71F9A140E00A0A556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24148AD61F9A140E00A0A556 /* ViewController.swift */; };
 		24148AD91F9A140E00A0A556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24148AD81F9A140E00A0A556 /* Assets.xcassets */; };
 		24148ADC1F9A140E00A0A556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24148ADA1F9A140E00A0A556 /* Main.storyboard */; };
 		24148AE81F9A140E00A0A556 /* ProgressReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24148AE71F9A140E00A0A556 /* ProgressReportTests.swift */; };
 		24148AF31F9A140E00A0A556 /* ProgressReportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24148AF21F9A140E00A0A556 /* ProgressReportUITests.swift */; };
+		2419E9B91F9B88A5001BA44A /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419E9B71F9B88A5001BA44A /* DropViewController.swift */; };
+		2419E9BA1F9B88A5001BA44A /* DropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2419E9B81F9B88A5001BA44A /* DropViewController.xib */; };
+		2419E9BE1F9B891B001BA44A /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419E9BD1F9B891B001BA44A /* DropView.swift */; };
 		636C9D412BBB35B0BCB5D6D1 /* Pods_ProgressReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A87EAB918450A559306AAE /* Pods_ProgressReport.framework */; };
 		76819266BA49A5DAFA651815 /* Pods_ProgressReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E708DAE108041A5F612C5FD /* Pods_ProgressReportUITests.framework */; };
 		897340721E67E2C3043FC778 /* Pods_ProgressReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D2E25B0DEFA299BFDA57CA /* Pods_ProgressReportTests.framework */; };
@@ -41,7 +43,6 @@
 		22D2E25B0DEFA299BFDA57CA /* Pods_ProgressReportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgressReportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24148AD11F9A140D00A0A556 /* ProgressReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24148AD41F9A140E00A0A556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24148AD61F9A140E00A0A556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24148AD81F9A140E00A0A556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24148ADB1F9A140E00A0A556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24148ADD1F9A140E00A0A556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +53,9 @@
 		24148AEE1F9A140E00A0A556 /* ProgressReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24148AF21F9A140E00A0A556 /* ProgressReportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressReportUITests.swift; sourceTree = "<group>"; };
 		24148AF41F9A140E00A0A556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2419E9B71F9B88A5001BA44A /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
+		2419E9B81F9B88A5001BA44A /* DropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropViewController.xib; sourceTree = "<group>"; };
+		2419E9BD1F9B891B001BA44A /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		6919CCC24B1BBFD4AF1F1730 /* Pods-ProgressReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReport/Pods-ProgressReport.debug.xcconfig"; sourceTree = "<group>"; };
 		72C5223E8889705B48C17780 /* Pods-ProgressReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReportUITests/Pods-ProgressReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9BE4C426FD88657694EF95D /* Pods-ProgressReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReportTests/Pods-ProgressReportTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				24148AD41F9A140E00A0A556 /* AppDelegate.swift */,
-				24148AD61F9A140E00A0A556 /* ViewController.swift */,
+				2419E9BD1F9B891B001BA44A /* DropView.swift */,
+				2419E9B71F9B88A5001BA44A /* DropViewController.swift */,
+				2419E9B81F9B88A5001BA44A /* DropViewController.xib */,
 				24148AD81F9A140E00A0A556 /* Assets.xcassets */,
 				24148ADA1F9A140E00A0A556 /* Main.storyboard */,
 				24148ADD1F9A140E00A0A556 /* Info.plist */,
@@ -282,6 +288,7 @@
 			files = (
 				24148AD91F9A140E00A0A556 /* Assets.xcassets in Resources */,
 				24148ADC1F9A140E00A0A556 /* Main.storyboard in Resources */,
+				2419E9BA1F9B88A5001BA44A /* DropViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +465,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24148AD71F9A140E00A0A556 /* ViewController.swift in Sources */,
 				24148AD51F9A140E00A0A556 /* AppDelegate.swift in Sources */,
+				2419E9B91F9B88A5001BA44A /* DropViewController.swift in Sources */,
+				2419E9BE1F9B891B001BA44A /* DropView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
