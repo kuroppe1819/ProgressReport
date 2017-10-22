@@ -14,13 +14,33 @@ protocol DropPresenterProtocol {
 }
 
 class DropViewPresenter: DropPresenterProtocol{
-    private weak var viewInput: DropViewInput?
+    private var dropUseCase: DropViewUseCase?
+//    private weak var viewInput: DropViewInput?
+
+//    required init(viewInput: DropViewInput){
+//        self.viewInput = viewInput
+//    }
     
-    required init(viewInput: DropViewInput){
-        self.viewInput = viewInput
+    init(){
+        self.dropUseCase = DropViewUseCase()
     }
     
     func draggingEntered(_ entered: Bool) {
-        viewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
+//        viewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
     }
-}
+    
+    func draggingEnded(_ sender: NSDraggingInfo){
+        guard let path = loadFilePath(sender) else {
+            return
+        }
+        dropUseCase?.postTextFile(path)
+    }
+    
+    private func loadFilePath(_ sender: NSDraggingInfo) -> String? {
+        guard let board = sender.draggingPasteboard().propertyList(forType: NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")) as? [String],
+            let path = board.first
+            else {
+                return nil
+        }
+        return path
+    }}

@@ -9,9 +9,11 @@
 import Cocoa
 
 class DropView: NSView {
-    private var presenter: DropPresenterProtocol?
+//    private var presenter: DropPresenterProtocol?
+    private var presenter: DropViewPresenter?
     
     required init?(coder decoder: NSCoder) {
+        self.presenter = DropViewPresenter()
         super.init(coder: decoder)
         self.registerForDraggedTypes([NSPasteboard.PasteboardType.fileURL])
     }
@@ -31,6 +33,7 @@ class DropView: NSView {
     
     override func draggingEnded(_ sender: NSDraggingInfo) {
         print("draggingEnded")
+        presenter?.draggingEnded(sender)
     }
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
