@@ -16,6 +16,7 @@
 		2419E9BA1F9B88A5001BA44A /* DropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2419E9B81F9B88A5001BA44A /* DropViewController.xib */; };
 		2419E9BE1F9B891B001BA44A /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419E9BD1F9B891B001BA44A /* DropView.swift */; };
 		2419E9C01F9B8C41001BA44A /* DropViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419E9BF1F9B8C41001BA44A /* DropViewPresenter.swift */; };
+		24CB003C1F9CD8930087A9FC /* DropViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB003B1F9CD8930087A9FC /* DropViewUseCase.swift */; };
 		636C9D412BBB35B0BCB5D6D1 /* Pods_ProgressReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A87EAB918450A559306AAE /* Pods_ProgressReport.framework */; };
 		76819266BA49A5DAFA651815 /* Pods_ProgressReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E708DAE108041A5F612C5FD /* Pods_ProgressReportUITests.framework */; };
 		897340721E67E2C3043FC778 /* Pods_ProgressReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D2E25B0DEFA299BFDA57CA /* Pods_ProgressReportTests.framework */; };
@@ -58,6 +59,7 @@
 		2419E9B81F9B88A5001BA44A /* DropViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropViewController.xib; sourceTree = "<group>"; };
 		2419E9BD1F9B891B001BA44A /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		2419E9BF1F9B8C41001BA44A /* DropViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewPresenter.swift; sourceTree = "<group>"; };
+		24CB003B1F9CD8930087A9FC /* DropViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewUseCase.swift; sourceTree = "<group>"; };
 		6919CCC24B1BBFD4AF1F1730 /* Pods-ProgressReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReport/Pods-ProgressReport.debug.xcconfig"; sourceTree = "<group>"; };
 		72C5223E8889705B48C17780 /* Pods-ProgressReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReportUITests/Pods-ProgressReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9BE4C426FD88657694EF95D /* Pods-ProgressReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReportTests/Pods-ProgressReportTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				24148AD41F9A140E00A0A556 /* AppDelegate.swift */,
 				2419E9BD1F9B891B001BA44A /* DropView.swift */,
 				2419E9BF1F9B8C41001BA44A /* DropViewPresenter.swift */,
+				24CB003B1F9CD8930087A9FC /* DropViewUseCase.swift */,
 				2419E9B71F9B88A5001BA44A /* DropViewController.swift */,
 				2419E9B81F9B88A5001BA44A /* DropViewController.xib */,
 				24148AD81F9A140E00A0A556 /* Assets.xcassets */,
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24148AD51F9A140E00A0A556 /* AppDelegate.swift in Sources */,
+				24CB003C1F9CD8930087A9FC /* DropViewUseCase.swift in Sources */,
 				2419E9B91F9B88A5001BA44A /* DropViewController.swift in Sources */,
 				2419E9C01F9B8C41001BA44A /* DropViewPresenter.swift in Sources */,
 				2419E9BE1F9B891B001BA44A /* DropView.swift in Sources */,
