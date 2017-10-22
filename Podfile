@@ -8,6 +8,7 @@ target 'ProgressReport' do
   # Pods for ProgressReport
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'Swinject',   '~> 2.1.0'
 
   target 'ProgressReportTests' do
     inherit! :search_paths
