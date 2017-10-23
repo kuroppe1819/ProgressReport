@@ -21,5 +21,12 @@ class DropViewUseCase{
         } catch  {
             print("Path or File not found")
         }
+        
+        let env = ProcessInfo.processInfo.environment
+        if let value = env["api_key"] {
+            print(value)
+        } else {
+            // Environment variable not set (or not a string)
+        }
     }
 }
