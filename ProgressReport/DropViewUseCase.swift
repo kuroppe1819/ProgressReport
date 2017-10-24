@@ -13,13 +13,27 @@ protocol DropUsecaseProtocol {
 }
 
 class DropViewUseCase{
+    private let repository: DropViewRepository
+    
+    init() {
+        self.repository = DropViewRepository()
+    }
     
     func postTextFile(_ path: String) {
+        var content: String = ""
+        
         do {
-            let content = try String(contentsOfFile: path)
-            print("content: \(content)")
+            content = try String(contentsOfFile: path)
         } catch  {
             print("Path or File not found")
         }
+        
+        if (content != "") {
+            repository.postProgressReport(addBoader(addBoader(content)))
+        }
+    }
+    
+    private func addBoader(_ content: String) -> String{
+        return "```\(content)```"
     }
 }
