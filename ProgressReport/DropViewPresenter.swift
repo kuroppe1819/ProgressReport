@@ -11,6 +11,7 @@ import Cocoa
 
 protocol DropPresenterProtocol {
     func draggingEntered(_: Bool)
+    func draggingEnded(_ : NSDraggingInfo)
 }
 
 class DropViewPresenter: DropPresenterProtocol{
