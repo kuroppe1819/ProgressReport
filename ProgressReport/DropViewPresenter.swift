@@ -16,18 +16,15 @@ protocol DropPresenterProtocol {
 
 class DropViewPresenter: DropPresenterProtocol{
     private var dropUseCase: DropViewUseCase?
-//    private weak var viewInput: DropViewInput?
-
-//    required init(viewInput: DropViewInput){
-//        self.viewInput = viewInput
-//    }
+    private var dropViewInput: DropViewInput?
     
-    init(){
-        self.dropUseCase = DropViewUseCase()
+    init(dropViewInput: DropViewInput, dropUseCase: DropViewUseCase){
+        self.dropViewInput = dropViewInput
+        self.dropUseCase = dropUseCase
     }
     
     func draggingEntered(_ entered: Bool) {
-//        viewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
+        dropViewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
     }
     
     func draggingEnded(_ sender: NSDraggingInfo){

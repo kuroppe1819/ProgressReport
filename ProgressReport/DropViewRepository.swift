@@ -8,14 +8,18 @@
 
 import Foundation
 
+protocol DropRepositoryProtocol {
+    func postProgressReport(_ : String)
+}
+
 class DropViewRepository{
-    private let httpClient: HttpClient
+    private let httpClient: HttpClient?
     
-    init(){
-        self.httpClient = HttpClient()
+    init(httpClient: HttpClient){
+        self.httpClient = httpClient
     }
     
     func postProgressReport(_ comment: String){
-        httpClient.postProgressReport(SlackApi.addComentsFiles(comment: comment))
+        httpClient?.postProgressReport(SlackApi.addComentsFiles(comment: comment))
     }
 }
