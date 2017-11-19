@@ -10,8 +10,8 @@ import Foundation
 import Cocoa
 
 protocol DropPresenterProtocol {
-    func draggingEntered(_: Bool)
-    func draggingEnded(_ : NSDraggingInfo)
+    func draggingEntered(entered: Bool?)
+    func draggingEnded(sender: NSDraggingInfo?)
 }
 
 class DropViewPresenter: DropPresenterProtocol{
@@ -23,12 +23,16 @@ class DropViewPresenter: DropPresenterProtocol{
         self.dropUseCase = dropUseCase
     }
     
-    func draggingEntered(_ entered: Bool) {
-        dropViewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
+    func draggingEntered(entered: Bool?) {
+        guard entered != nil else {
+            return
+        }
+        dropViewInput?.setTextColor(entered! ? NSColor.systemBlue : NSColor.windowFrameColor)
     }
     
-    func draggingEnded(_ sender: NSDraggingInfo){
-        guard let path = loadFilePath(sender) else {
+    func draggingEnded(sender: NSDraggingInfo?){
+        guard sender != nil, let path = loadFilePath(sender!) else {
+            print("not exist path")
             return
         }
         dropUseCase?.postTextFile(path)
