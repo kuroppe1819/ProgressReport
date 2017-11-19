@@ -21,6 +21,14 @@ class DropViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         print("viewDidLoad")
+
+        _ = dropView.draggingEntered.subscribe({ entered in
+            self.dropPresenter?.draggingEntered(entered: entered.element)
+        })
+        
+        _ = dropView.enteredFile.subscribe({ sender in
+            self.dropPresenter?.draggingEnded(sender: sender.element)
+        })
     }
 
     func inject(dropPresenter: DropViewPresenter) {
