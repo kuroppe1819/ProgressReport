@@ -24,18 +24,18 @@ class DropViewPresenter: DropPresenterProtocol{
     }
     
     func draggingEntered(entered: Bool?) {
-        guard entered != nil else {
+        guard let entered = entered else {
             return
         }
-        dropViewInput?.setTextColor(entered! ? NSColor.systemBlue : NSColor.windowFrameColor)
+        dropViewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
     }
     
     func draggingEnded(sender: NSDraggingInfo?){
-        guard sender != nil, let path = loadFilePath(sender!) else {
+        guard let sender = sender, let path = loadFilePath(sender) else {
             print("not exist path")
             return
         }
-        dropUseCase?.postTextFile(path)
+        dropUseCase?.postTextFile(path: path)
     }
     
     private func loadFilePath(_ sender: NSDraggingInfo) -> String? {
