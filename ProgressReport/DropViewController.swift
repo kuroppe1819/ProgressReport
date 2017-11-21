@@ -15,13 +15,30 @@ protocol DropViewInput: class {
 class DropViewController: NSViewController {
     @IBOutlet weak var descriptionLabel: NSTextField!
     @IBOutlet weak var dropView: DropView!
+    private var dropPresenter: DropViewPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        print("viewDidLoad")
+
+        _ = dropView.draggingEntered.subscribe({ entered in
+            self.dropPresenter?.draggingEntered(entered: entered.element)
+        })
+        
+        _ = dropView.enteredFile.subscribe({ sender in
+            self.dropPresenter?.draggingEnded(sender: sender.element)
+        })
     }
-    
-    func setTextColor(_ color: NSColor){
+
+    func inject(dropPresenter: DropViewPresenter) {
+        self.dropPresenter = dropPresenter
+    }
+}
+
+extension DropViewController: DropViewInput {
+
+    func setTextColor(_ color: NSColor) {
         descriptionLabel.textColor = color
     }
 }

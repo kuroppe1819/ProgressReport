@@ -23,6 +23,7 @@
 		636C9D412BBB35B0BCB5D6D1 /* Pods_ProgressReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A87EAB918450A559306AAE /* Pods_ProgressReport.framework */; };
 		76819266BA49A5DAFA651815 /* Pods_ProgressReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E708DAE108041A5F612C5FD /* Pods_ProgressReportUITests.framework */; };
 		897340721E67E2C3043FC778 /* Pods_ProgressReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D2E25B0DEFA299BFDA57CA /* Pods_ProgressReportTests.framework */; };
+		EA5C6AEAE65BB9E44AC38E23 /* DropBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C6341A4819550A5781A8D /* DropBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		B624314364017C318E436C6C /* Pods-ProgressReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReport/Pods-ProgressReport.release.xcconfig"; sourceTree = "<group>"; };
 		C5CC8B930AA20B790F57C133 /* Pods-ProgressReportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReportTests/Pods-ProgressReportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3F46EC48ADF5E7C37B62392 /* Pods-ProgressReportUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressReportUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressReportUITests/Pods-ProgressReportUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EA5C6341A4819550A5781A8D /* DropBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				24148ADA1F9A140E00A0A556 /* Main.storyboard */,
 				24148ADD1F9A140E00A0A556 /* Info.plist */,
 				24148ADE1F9A140E00A0A556 /* ProgressReport.entitlements */,
+				EA5C6341A4819550A5781A8D /* DropBuilder.swift */,
 			);
 			path = ProgressReport;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				24AD1B481F9E3932004CB6F4 /* HttpClient.swift in Sources */,
 				2419E9C01F9B8C41001BA44A /* DropViewPresenter.swift in Sources */,
 				2419E9BE1F9B891B001BA44A /* DropView.swift in Sources */,
+				EA5C6AEAE65BB9E44AC38E23 /* DropBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,32 +8,34 @@
 
 import Foundation
 
-protocol DropUsecaseProtocol {
-    func postTextFile(_ : String)
+protocol DropUseCaseProtocol {
+    func postTextFile(path: String)
 }
 
-class DropViewUseCase{
-    private let repository: DropViewRepository
-    
-    init() {
-        self.repository = DropViewRepository()
+class DropViewUseCase: DropUseCaseProtocol {
+    private let dropRepository: DropViewRepository?
+
+    init(dropRepository: DropViewRepository) {
+        self.dropRepository = dropRepository
     }
-    
-    func postTextFile(_ path: String) {
-        var content: String = ""
-        
+
+    func postTextFile(path: String) {
+        var content: String?
+
         do {
             content = try String(contentsOfFile: path)
-        } catch  {
+        } catch {
             print("Path or File not found")
         }
-        
-        if (content != "") {
-            repository.postProgressReport(addBoader(addBoader(content)))
+
+        guard let comment = content else {
+            return
         }
+        dropRepository?.postProgressReport(addBoader(comment))
     }
-    
-    private func addBoader(_ content: String) -> String{
+
+    private func addBoader(_ content: String) -> String {
         return "```\(content)```"
     }
+
 }
