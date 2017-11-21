@@ -40,6 +40,7 @@ class DropView: NSView {
     override func draggingEnded(_ sender: NSDraggingInfo) {
         print("draggingEnded")
         enteredFileSubject.onNext(sender)
+        draggingEnteredSubject.value = false
     }
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
