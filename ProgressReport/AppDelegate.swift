@@ -14,10 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         let dropViewController = DropBuilder().build()
-
-        let window = NSWindow()
-        window.contentViewController = dropViewController
-        window.makeKeyAndOrderFront(self)
+        if let window = NSApplication.shared.mainWindow {
+            window.contentViewController = dropViewController
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
