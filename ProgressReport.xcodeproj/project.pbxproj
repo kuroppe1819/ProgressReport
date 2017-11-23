@@ -131,6 +131,7 @@
 			children = (
 				24148AD41F9A140E00A0A556 /* AppDelegate.swift */,
 				24AD1B471F9E3932004CB6F4 /* HttpClient.swift */,
+				EA5C6341A4819550A5781A8D /* DropBuilder.swift */,
 				2419E9BD1F9B891B001BA44A /* DropView.swift */,
 				24AD1B451F9E37AB004CB6F4 /* DropViewRepository.swift */,
 				24AD1B4D1F9E5709004CB6F4 /* ApiParameters.swift */,
@@ -142,7 +143,6 @@
 				24148ADA1F9A140E00A0A556 /* Main.storyboard */,
 				24148ADD1F9A140E00A0A556 /* Info.plist */,
 				24148ADE1F9A140E00A0A556 /* ProgressReport.entitlements */,
-				EA5C6341A4819550A5781A8D /* DropBuilder.swift */,
 			);
 			path = ProgressReport;
 			sourceTree = "<group>";

@@ -15,4 +15,9 @@ struct DropBuilder {
         viewController.inject(dropPresenter: presenter)
         return viewController
     }
+    
+    func postTextBuilder() -> DropViewUseCase {
+        let repository = DropViewRepository(httpClient: HttpClient())
+        return DropViewUseCase(dropRepository: repository)
+    }
 }
