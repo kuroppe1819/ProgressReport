@@ -10,6 +10,12 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    // Dockにファイルをドラッグしたときに呼び出される
+    func application(_ sender: NSApplication, openFile filePath: String) -> Bool {
+        DropBuilder().postTextBuilder().postTextFile(path: filePath)
+        return true
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
