@@ -11,7 +11,7 @@ struct DropBuilder {
         let viewController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Drop")) as! DropViewController
         let repository = DropViewRepository(httpClient: HttpClient())
         let useCase = DropViewUseCase(dropRepository: repository)
-        let presenter = DropViewPresenter(dropViewInput: viewController, dropUseCase: useCase)
+        let presenter = DropViewPresenter(dropUseCase: useCase)
         viewController.inject(dropPresenter: presenter)
         return viewController
     }
