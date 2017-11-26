@@ -9,11 +9,10 @@
 import Cocoa
 
 protocol DropViewInput: class {
-    func setTextColor(_: NSColor)
+    func draggingEnded(sender: NSDraggingInfo?)
 }
 
 class DropViewController: NSViewController {
-    @IBOutlet weak var descriptionLabel: NSTextField!
     @IBOutlet weak var dropView: DropView!
     private var dropPresenter: DropViewPresenter?
     
@@ -21,14 +20,7 @@ class DropViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         print("viewDidLoad")
-
-        _ = dropView.draggingEntered.subscribe({ entered in
-            self.dropPresenter?.draggingEntered(entered: entered.element)
-        })
-        
-        _ = dropView.enteredFile.subscribe({ sender in
-            self.dropPresenter?.draggingEnded(sender: sender.element)
-        })
+        dropView.inject(dropViewInput: self)
     }
 
     func inject(dropPresenter: DropViewPresenter) {
@@ -38,7 +30,7 @@ class DropViewController: NSViewController {
 
 extension DropViewController: DropViewInput {
 
-    func setTextColor(_ color: NSColor) {
-        descriptionLabel.textColor = color
+    func draggingEnded(sender: NSDraggingInfo?) {
+        dropPresenter?.draggingEnded(sender: sender)
     }
 }

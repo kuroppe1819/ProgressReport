@@ -10,24 +10,14 @@ import Foundation
 import Cocoa
 
 protocol DropPresenterProtocol {
-    func draggingEntered(entered: Bool?)
     func draggingEnded(sender: NSDraggingInfo?)
 }
 
 class DropViewPresenter: DropPresenterProtocol{
     private var dropUseCase: DropViewUseCase?
-    private var dropViewInput: DropViewInput?
     
-    init(dropViewInput: DropViewInput, dropUseCase: DropViewUseCase){
-        self.dropViewInput = dropViewInput
+    init(dropUseCase: DropViewUseCase){
         self.dropUseCase = dropUseCase
-    }
-    
-    func draggingEntered(entered: Bool?) {
-        guard let entered = entered else {
-            return
-        }
-        dropViewInput?.setTextColor(entered ? NSColor.systemBlue : NSColor.windowFrameColor)
     }
     
     func draggingEnded(sender: NSDraggingInfo?){

@@ -11,12 +11,9 @@ import RxSwift
 import RxCocoa
 
 class DropView: NSView {
-    private let draggingEnteredSubject = Variable(false)
-    private let enteredFileSubject = PublishSubject<NSDraggingInfo>()
-
-    var draggingEntered: Observable<Bool> { return draggingEnteredSubject.asObservable() }
-    var enteredFile: Observable<NSDraggingInfo> { return enteredFileSubject }
-
+    @IBOutlet weak var descriptionLabel: NSTextField!
+    private var dropViewInout: DropViewInput?
+    
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
         self.registerForDraggedTypes([NSPasteboard.PasteboardType.fileURL])
@@ -28,23 +25,27 @@ class DropView: NSView {
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         print("draggingEntered")
-        draggingEnteredSubject.value = true
+        descriptionLabel.textColor = NSColor.systemBlue
         return .copy
     }
     
     override func draggingExited(_ sender: NSDraggingInfo?) {
         print("draggingExited")
-        draggingEnteredSubject.value = false
+        descriptionLabel.textColor = NSColor.windowFrameColor
     }
     
     override func draggingEnded(_ sender: NSDraggingInfo) {
         print("draggingEnded")
-        enteredFileSubject.onNext(sender)
-        draggingEnteredSubject.value = false
+        dropViewInout?.draggingEnded(sender: sender)
+        descriptionLabel.textColor = NSColor.windowFrameColor
     }
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         print("performDragOperation")
         return true
+    }
+    
+    func inject(dropViewInput: DropViewInput) {
+        self.dropViewInout = dropViewInput
     }
 }

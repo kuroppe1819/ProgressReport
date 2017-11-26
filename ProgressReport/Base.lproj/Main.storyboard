@@ -726,6 +726,9 @@
                                     <constraint firstAttribute="height" constant="270" id="76p-WI-9hS"/>
                                     <constraint firstAttribute="width" constant="480" id="GLK-vt-haX"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="gfn-OJ-Hnf" id="ebG-bv-IaQ"/>
+                                </connections>
                             </customView>
                         </subviews>
                         <constraints>
